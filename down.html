@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Download_test</title>
+ <meta http-equiv="content-type" charset="Shift-jis">
+</head>
+<body>
+  <div>
+   <font size="3">test</font>
+  </div>
+  <br>
+ <button onclick="downloadFile()">1KB.zip</button>
+ <br><br>
+ <a href="C:\Cases\27940644\Library\BizRobo! Basic_v11.5.0_新機能の紹介.pdf" target="_blank" download>4MB_option</a>
+    <script>
+        function downloadFile() {
+            window.location.href = "file://C:/Cases/27940644/Library/1KB.zip"; // ダウンロードしたいファイルのURLを指定
+        }
+    </script>
+</body>
+</html>
