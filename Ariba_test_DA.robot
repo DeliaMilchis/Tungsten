@@ -1136,7 +1136,7 @@
                 "version":1
               },
               "gizmo":{
-                "text": { "string": "done" },
+                "text": { "string": "=\"done \"+text(dateTime())" },
                 "comment": {
                   "meta":{
                     "className":"Comment",
