@@ -1108,6 +1108,50 @@
         },
         {
           "meta":{
+            "className":"WriteLogStep",
+            "version":1
+          },
+          "gizmo":{
+            "name": {
+              "meta":{
+                "className":"StepName",
+                "version":0
+              },
+              "gizmo":{
+                "customName": { "string": "" }
+              }
+            },
+            "comment": {
+              "meta":{
+                "className":"Comment",
+                "version":0
+              },
+              "gizmo":{
+                "comment": { "string": "" }
+              }
+            },
+            "message": {
+              "meta":{
+                "className":"Expression",
+                "version":1
+              },
+              "gizmo":{
+                "text": { "string": "done" },
+                "comment": {
+                  "meta":{
+                    "className":"Comment",
+                    "version":0
+                  },
+                  "gizmo":{
+                    "comment": { "string": "" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "meta":{
             "className":"GuardedChoiceStep",
             "version":1
           },
