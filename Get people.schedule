@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>270245272109500</id>
+  <name>Get people</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Get people1744664846187</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>Get people:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>GetPeople</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>GetPeople</name>
+                <project>Default project</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects/&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0GetPeople":"GetPeople"}</displayNameMap>
+  </blockJob>
+  <triggerUnit>2</triggerUnit>
+  <totalRuns>16</totalRuns>
+  <active>false</active>
+  <useEmailNotification>false</useEmailNotification>
+  <emails/>
+  <previousRun id="10">2025-04-17 21:32:00.865 UTC</previousRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <createdBy>admin</createdBy>
+  <modifiedBy>admin</modifiedBy>
+  <cluster id="11">
+    <name>NonProduction</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="12">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="13">
+    <name>270245272109500</name>
+    <start id="14">2025-04-14 21:04:00.0 UTC</start>
+    <interval>240000</interval>
+    <repeatCount>-1</repeatCount>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <tasksPriority>MEDIUM</tasksPriority>
+  <tasksTimeout>600000</tasksTimeout>
+  <commitMessage/>
+  <lastModified id="15">2025-04-16 22:03:16.698 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>

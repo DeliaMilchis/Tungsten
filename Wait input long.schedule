@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schedule id="1">
+  <id>444827429562200</id>
+  <name>Wait input long</name>
+  <blockJob id="2">
+    <block class="com.kapowtech.scheduler.server.entity.SequentialBlock" id="3">
+      <project id="4"/>
+      <name>Wait input long1744839430425</name>
+      <namedBlock>false</namedBlock>
+      <childReference id="5">
+        <child class="concurrentBlock" id="6">
+          <project reference="4"/>
+          <name>Wait input long:middleBlock</name>
+          <namedBlock>false</namedBlock>
+          <childReference id="7">
+            <child class="robotBlock" id="8">
+              <project reference="4"/>
+              <name>wait_input</name>
+              <namedBlock>true</namedBlock>
+              <robot id="9">
+                <name>wait_input</name>
+                <project>Default project</project>
+              </robot>
+            </child>
+            <scopeName>0</scopeName>
+            <enabled>true</enabled>
+            <order>0</order>
+          </childReference>
+        </child>
+        <scopeName>0</scopeName>
+        <enabled>true</enabled>
+        <order>0</order>
+      </childReference>
+    </block>
+    <blockInput>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;InputConfiguration&gt;
+  &lt;usesNewEncryption&gt;true&lt;/usesNewEncryption&gt;
+  &lt;__inputObjects&gt;
+    &lt;InputObject&gt;
+      &lt;allowNestedValues&gt;true&lt;/allowNestedValues&gt;
+      &lt;__variableName&gt;Wait input long1744839430425#0#Wait input long:middleBlock#0#wait_input#interval&lt;/__variableName&gt;
+      &lt;__propertyNames&gt;
+        &lt;string&gt;variableName&lt;/string&gt;
+        &lt;string&gt;name&lt;/string&gt;
+        &lt;string&gt;attributes&lt;/string&gt;
+      &lt;/__propertyNames&gt;
+      &lt;__name&gt;interval&lt;/__name&gt;
+      &lt;__attributes&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;100&lt;/value&gt;
+          &lt;__name&gt;iterations&lt;/__name&gt;
+          &lt;required&gt;false&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+        &lt;Attribute&gt;
+          &lt;type&gt;SHORT_TEXT&lt;/type&gt;
+          &lt;value&gt;15&lt;/value&gt;
+          &lt;__name&gt;duration&lt;/__name&gt;
+          &lt;required&gt;false&lt;/required&gt;
+          &lt;visible&gt;true&lt;/visible&gt;
+        &lt;/Attribute&gt;
+      &lt;/__attributes&gt;
+    &lt;/InputObject&gt;
+  &lt;/__inputObjects&gt;
+&lt;/InputConfiguration&gt;</blockInput>
+    <schedule reference="1"/>
+    <active>false</active>
+    <displayNameMap>{"0wait_input":"wait_input"}</displayNameMap>
+  </blockJob>
+  <triggerUnit>3</triggerUnit>
+  <totalRuns>1</totalRuns>
+  <active>false</active>
+  <useEmailNotification>false</useEmailNotification>
+  <emails/>
+  <previousRun id="10">2025-04-16 22:02:19.12 UTC</previousRun>
+  <maxRuntime>-1</maxRuntime>
+  <maxObjectsExtracted>-1</maxObjectsExtracted>
+  <createdBy>admin</createdBy>
+  <modifiedBy>admin</modifiedBy>
+  <cluster id="11">
+    <name>NonProduction</name>
+  </cluster>
+  <scheduler class="org.quartz.impl.StdScheduler" id="12">
+    <scheduler/></scheduler>
+  <trigger class="org.quartz.impl.triggers.SimpleTriggerImpl" id="13">
+    <name>444827429562200</name>
+    <start id="14">2025-04-16 21:10:00.0 UTC</start>
+    <interval>3600000</interval>
+    <repeatCount>-1</repeatCount>
+  </trigger>
+  <revisionNumber>local</revisionNumber>
+  <tasksPriority>MEDIUM</tasksPriority>
+  <tasksTimeout>600000</tasksTimeout>
+  <commitMessage/>
+  <lastModified id="15">2025-04-16 21:37:20.655 UTC</lastModified>
+  <serializationVersion>1</serializationVersion>
+</schedule>
